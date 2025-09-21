@@ -1,7 +1,12 @@
 import React from 'react'
 
-export const UserContainer = () => {
+export const UserContainer = ({user, logout}) => {
   return (
-    <div>UserContainer</div>
+    <div className='user-container'>
+        <p>Hello There, {user?.name}</p>
+        <button className='btn' onClick={logout}>
+            logout
+        </button>
+    </div>
   )
 }
