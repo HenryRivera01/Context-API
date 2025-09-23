@@ -3,10 +3,15 @@ import React from 'react'
 export const UserContainer = ({user, logout}) => {
   return (
     <div className='user-container'>
-        <p>Hello There, {user?.name}</p>
+      {user?<>
+        <p>Hello There, {user?.name?.toUpperCase()}</p>
         <button className='btn' onClick={logout}>
             logout
         </button>
+      </>:
+        <p>Please Login</p>
+      }
+        
     </div>
   )
 }
